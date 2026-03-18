@@ -1,10 +1,21 @@
 body {
     text-align: center;
-    background-color: #f0f8ff; /* 雪をイメージした薄い青 */
+    background-color: #f0f8ff;
     font-family: sans-serif;
+    margin: 0; /* スマホで変な余白が出ないようにする */
+    padding: 10px;
+}
+h1 {
+    font-size: 20px; /* スマホでも見やすい文字サイズに */
 }
 canvas {
     background-color: #ffffff;
     border: 2px solid #333;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    
+    /* ここから下がレスポンシブ化（スマホ対応）の要 */
+    width: 100%;       /* 画面の横幅いっぱいに広げる */
+    max-width: 600px;  /* ただしPCなどの大画面では最大600pxで止める */
+    height: auto;      /* 縦幅は比率を保って自動調整 */
+    touch-action: none; /* スマホで画面をなぞった時にスクロールしてしまうのを防ぐ */
 }
